@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trivia!</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    </head>
+    <body>
+        <div id='trivia_questions'></div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $.get("https://opentdb.com/api.php?amount=10&category=15", displayData)
+
+            function displayData(data){
+                trivia = data
+                console.log(trivia)
+                for (var i = 0; i < trivia.results.length; i ++){
+                    $("#trivia_questions").append("<p>" + trivia.results[i].question + "</p>").append("<p>Category: " + trivia.results[i].category + " | Difficulty: " + trivia.results[i].difficulty + "</p>")
+                }
+            }
+        })
+    </script>
+</html>

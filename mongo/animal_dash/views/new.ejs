@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Add an Animal</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class='jumbotron border border-dark mt-5 ml-5 mr-5'>
+            <div class='row text-center'>
+                <div class='col'>
+                    <h1>Add your animal to the database!</h1>
+                </div>
+            </div>
+            <div class='row text-center justify-content-center'>
+                <div class='col-5'>
+                    <form action="/animals" method='post'>
+                        <label>Animal Species: </label><input class='form-control text-center' type='text' name='species'>
+                        <br>
+                        <label>Your Animal Name: </label><input class='form-control text-center' type='text' name='name'>
+                        <br>
+                        <input type='submit' value='Add Animal' class='btn btn-primary'> | <a href="/" class='btn btn-secondary'>Home</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

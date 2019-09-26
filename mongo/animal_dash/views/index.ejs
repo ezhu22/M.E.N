@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Awesome Animals!</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class='jumbotron border border-dark mt-5 ml-5 mr-5'>
+            <div class='row text-center'>
+                <div class='col'>
+                    <h1>Here are all the awesome animals!</h1>
+                </div>
+            </div>
+            <div class='row text-center justify-content-center'>
+                <div class='col-6'>
+                    <% for (var animal of all_animals) { %>
+                        <h3 class='mt-4'><%= animal.name %> is a <%=animal.species %></h3> 
+                        <br>
+                        <a href="/animals/edit/<%= animal._id %>" class='btn-sm btn-success'>Edit</a> | <a href="/animals/destroy/<%= animal._id %>" class='btn-sm btn-danger'>Delete</a>
+                        <br>
+                    <% } %>
+                    <a href="/animals/new" class='btn btn-primary mt-4'>Add an Animal</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

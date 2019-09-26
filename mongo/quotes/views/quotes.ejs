@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Awesome Quotes!</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class='jumbotron border border-dark mt-5 ml-5 mr-5'>
+            <div class='row text-center'>
+                <div class='col'>
+                    <h1>Here are all the awesome quotes!</h1>
+                </div>
+            </div>
+            <div class='row text-center justify-content-center'>
+                <div class='col-5'>
+                    <% for (var quote of all_quotes) { %>
+                        <h3>"<%= quote.content %>"</h3>
+                        <h6>-<%= quote.name %> </h6> 
+                    <% } %>
+                    <a href="/" class='btn btn-primary'>Home</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
